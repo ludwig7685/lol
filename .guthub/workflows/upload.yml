@@ -1,0 +1,27 @@
+name: Upload File
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
+
+      - name: Upload File
+        run: |
+          # Use scripts or commands here to upload the file to the repository's "files" folder
+          # You might need to use Git commands to push changes
+
+      - name: Commit changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git commit -m "Upload file via GitHub Action"
+          git push
