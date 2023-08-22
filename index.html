@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload</title>
+</head>
+<body>
+    <form enctype="multipart/form-data">
+        <input type="file" name="file" id="file">
+        <button type="button" onclick="uploadFile()">Upload</button>
+    </form>
+
+    <script>
+        function uploadFile() {
+            const fileInput = document.getElementById('file');
+            const file = fileInput.files[0];
+
+            // Trigger GitHub Action using fetch or other AJAX method
+            // Include file as payload if needed
+        }
+    </script>
+</body>
+</html>
